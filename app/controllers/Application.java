@@ -29,7 +29,13 @@ public class Application extends Controller {
 
     @Transactional(readOnly = true)
     public Result getPersons() {
-        List<Person> persons = (List<Person>) JPA.em().createQuery("select p from Person p").getResultList();
+        List<Person> persons = (List<Person>) JPA.em().createQuery("select p from " + Person.TABLE_NAME + " p ").getResultList();
         return ok(toJson(persons));
+    }
+
+    @Transactional(readOnly = true)
+    public Result getPerson(Integer id) {
+        Person person = JPA.em().find(Person.class, id);
+        return ok(toJson(person));
     }
 }
