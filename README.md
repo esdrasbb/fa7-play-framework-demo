@@ -1,3 +1,5 @@
-# Getting started with Play (Java)
+# Play Framework (Java)  Default template(play-java-intro)
 
-This project demonstrate how to create a simple CRUD application with Play. A screencast to the project exist on [playframework.com](http://playframework.com)
+This demo project demonstrate how to create a default play framework application with Play.
+
+(http://playframework.com)
